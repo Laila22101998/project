@@ -6,8 +6,14 @@ import { useFormik } from "formik";
 import { loginSchema } from "../../validation/LoginSchema";
 import { AiOutlineEye } from "react-icons/ai";
 import { RiEyeCloseLine } from "react-icons/ri";
+import { setLogin } from "../../store/Initializer";
+import { useDispatch } from "react-redux";
+import { useNavigate } from "react-router-dom";
+
 const Login = () => {
     const [loading, setLoading] = useState(false);
+    const navigate = useNavigate();
+    const dispatch = useDispatch();
     const [show, setShow] = useState(false);
     const handleShow = () => {
         setShow(!show)
@@ -31,6 +37,10 @@ const Login = () => {
             setLoading(false)
             formik.resetForm();
             console.log(values)
+            setTimeout(() => {
+                navigate("/");
+              }, 1000);
+            dispatch(setLogin({userName:values.userName}))
         }
     }
     return (

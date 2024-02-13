@@ -1,10 +1,11 @@
 import { Navigate } from 'react-router-dom';
-import { Layout } from './Layout';
+import { useSelector } from 'react-redux';
+import Layout from './Layout';
 
 export const ProtectedRoute = () => {
-    let logintoken = { token: JSON.stringify(sessionStorage.getItem("token")) };
-    let AdminName = { admin: JSON.parse(sessionStorage.getItem("admin")) };
-  return logintoken.token && AdminName.admin ? (
+   const user = useSelector((state)=>state.app.app.login.userName)
+   
+  return user ? (
    <Layout/>
     ) : (
         <Navigate to="/login" />
