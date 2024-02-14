@@ -2,7 +2,7 @@ import "../../assets/styles/Layout.css";
 import { IoMenu } from "react-icons/io5";
 import { AiOutlineClose } from "react-icons/ai";
 import { useState } from "react";
-import { setExpand } from "../store/Initializer";
+import { setExpand, setRouteName } from "../store/Initializer";
 import { useDispatch, useSelector } from "react-redux";
 import { Routes } from "./SiderRoute";
 import { Link, useLocation } from "react-router-dom";
@@ -17,7 +17,9 @@ const Sider = () => {
     setIsExpand(!isExpand);
     dispatch(setExpand(isExpand));
   };
-
+  const handleRouteClick = (routeName) => {
+    dispatch(setRouteName(routeName))
+  }
 
   return (
     <div className={`sider_main ${menu ? "sider_expand" : "sider_reduce"}`}>
@@ -27,16 +29,15 @@ const Sider = () => {
           {menu ? <IoMenu onClick={handleExpand} /> : <AiOutlineClose onClick={handleExpand} />}
         </div>
       </div>
-  
+
       {Routes.map((route, index) => (
         <div key={index} className="link_main">
-       
-            <Link to={route.path} className={`link_div ${location.pathname === route.path ? "active-link" : ""} ${menu ? "active-content" : "link_content"}`}>
-              <span className="link_icon">{route.icon}</span>
-              {menu && <span>{route.name}</span>}
-            </Link>
-   
-        
+          <Link to={route.path} onClick={() => handleRouteClick(route.name)}
+            className={`link_div ${location.pathname === route.path ? "active-link" : ""} 
+            ${menu ? "active-content" : "link_content"}`}>
+            <span className="link_icon">{route.icon}</span>
+            {menu && <span>{route.name}</span>}
+          </Link>
         </div>
       ))}
     </div>

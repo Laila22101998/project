@@ -5,6 +5,8 @@ const Initializer = createSlice({
   initialState: {
     login: {},
     expand:false,
+    routeName:"",
+    themes:{},
   },
   reducers: {
     setLogin: (state, actions) => {
@@ -12,6 +14,12 @@ const Initializer = createSlice({
     },
     setExpand:(state,actions)=>{
       state.expand = actions.payload;
+    },
+    setRouteName:(state,actions)=>{
+      state.routeName = actions.payload;
+    },
+    setTheme:(state,actions)=>{
+      state.themes = actions.payload;
     }
     // clearAppState: (state) => {
     //   state.templateContent = null;
@@ -22,6 +30,8 @@ const Initializer = createSlice({
 export const {
     setLogin,
     setExpand,
+    setRouteName,
+    setTheme,
 } = Initializer.actions;
 
 const appReducer = Initializer.reducer;

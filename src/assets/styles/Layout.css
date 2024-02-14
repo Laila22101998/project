@@ -1,3 +1,6 @@
+/* ====================sider style start==================== */
+
+
 .sider_expand {
     width: 190px;
     height: 100vh;
@@ -5,7 +8,7 @@
 }
 
 .sider_main {
-    background-color: #96b3f1e8;
+    background-color: #a1d1ec;
 }
 
 .sider_reduce {
@@ -63,6 +66,14 @@
     display: flex;
 }
 
+/* ====================sider style end==================== */
+
+
+/* ====================outlet style start==================== */
+.outlet_content {
+    padding: 10px;
+}
+
 .expand {
     width: calc(100% - 190px);
     transition: all 0.5s ease;
@@ -72,3 +83,34 @@
     width: calc(100% - 70px);
     transition: all 0.5s ease;
 }
+
+/* ====================outlet style end==================== */
+
+/* ====================Header style start==================== */
+.header_container {
+    height: auto;
+    padding: 15px;
+    border-radius: 5px;
+    background: #e6f3fa;
+    border: 1px solid #c2e3f5ec;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hear_icon {
+    font-size: 1.6rem;
+}
+
+.dropDown {
+    position: absolute;
+    right: 27px;
+    z-index: 999;
+    top: 83px;
+    width: 103px;
+    background-color: #e6f3fa;
+    border-radius: 5px;
+    border: 1px solid #c2e3f5ec;
+}
+
+/* ====================Header style end==================== */

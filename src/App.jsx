@@ -11,18 +11,17 @@ function App() {
 
   return (
     <>
-        <div>
+
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<ProtectedRoute />}>
-            <Route index element={<Dashboard/>} />
-            <Route path="/todo" element={<Home/>} />
+            <Route index element={<Dashboard />} />
+            <Route path="/todo" element={<Home />} />
           </Route>
 
           <Route path="/login" element={<Login />} />
         </Routes>
       </BrowserRouter>
-    </div>
     </>
   )
 }
