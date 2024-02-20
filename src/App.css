@@ -1,3 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+
 body {
   margin: 0px;
+  /* font-family: "Jost", sans-serif; */
 }
+
+:root {
+  /* Dark theme variables */
+  --dark-background-color: #a0afb7;
+  --dark-primary-color: #e7ebed;
+  --dark-secondary-color: #adb3bc;
+  --dark-teritory-color: #d8d7d5;
+  --dark-quaternary-color: #000;
+  /* Add other dark theme variables here */
+
+  /* Light theme variables */
+  --light-background-color: #436fcd;
+  --light-primary-color: #0251b3;
+  --light-secondary-color: #0074b7;
+  --light-teritory-color: #163b50;
+  --light-quaternary-color: #d8d7d5;
+  /* Add other light theme variables here */
+
+  /* Default to dark theme */
+  --background-color: var(--dark-background-color);
+  --primary-color: var(--dark-primary-color);
+  --secondary-color: var(--dark-secondary-color);
+  --teritory-color: var(--dark-teritory-color);
+  /* Add other default variables here */
+}
+
+/* Toggle between dark and light themes */
+.dark-theme {
+  --background-color: var(--dark-background-color);
+  --primary-color: var(--dark-primary-color);
+  --secondary-color: var(--dark-secondary-color);
+  --teritory-color: var(--dark-teritory-color);
+  --quaternary-color: var(--dark-quaternary-color);
+  /* Add other dark theme variables here */
+}
+
+.light-theme {
+  --background-color: var(--light-background-color);
+  --primary-color: var(--light-primary-color);
+  --secondary-color: var(--light-secondary-color);
+  --teritory-color: var(--light-teritory-color);
+  /* Add other light theme variables here */
+}
+

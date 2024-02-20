@@ -24,7 +24,7 @@ const Sider = () => {
   return (
     <div className={`sider_main ${!menu ? "sider_expand" : "sider_reduce"}`}>
       <div className="sider_head">
-        {!menu && <div>Template</div>}
+        {!menu && <div >Template</div>}
         <div>
           {!menu ? (
             <IoMenu onClick={handleExpand} />

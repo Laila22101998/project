@@ -7,7 +7,7 @@
 }
 
 .sider_main {
-  background-color: #a1d1ec;
+  background-color: var(--background-color);
 }
 
 .sider_reduce {
@@ -28,6 +28,7 @@
 .sider_head > div {
   display: flex;
   align-items: center;
+  color:var(--quaternary-color)
 }
 
 .link_main {
@@ -40,20 +41,21 @@
 }
 
 .link_icon {
-  margin-right: 10px;
   display: flex;
   align-items: center;
 }
 
 .link_div {
   text-decoration: none;
-  color: #000;
+  color: var(--quaternary-color);
   width: 100%;
   display: flex;
+  align-items: center;
+  gap: 1rem;
 }
 .link_name{
   text-decoration: none;
-  color: #000;
+  color:  var(--quaternary-color);
   width: 87%;
   display: flex;
   justify-content: space-between;
@@ -69,9 +71,6 @@
 .main_layout {
   width: 100%;
   display: flex;
-}
-.link_name{
-  margin-right:10px;
 }
 
 /* ====================sider style end==================== */
@@ -98,15 +97,17 @@
   height: auto;
   padding: 15px;
   border-radius: 5px;
-  background: #e6f3fa;
-  border: 1px solid #c2e3f5ec;
+  background: var(--primary-color);
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-
-.hear_icon {
+.head_name{
+  color:var(--quaternary-color);
+}
+.head_icon {
   font-size: 1.6rem;
+  color:var(--quaternary-color);
 }
 
 .dropDown{
@@ -114,9 +115,8 @@
   z-index: 999;
   top: 83px;
   width: 103px;
-  background-color: #e6f3fa;
+  background-color:var(--primary-color);
   border-radius: 5px;
-  border: 1px solid #c2e3f5ec;
 }
 .RTL{
   left: 27px; 
@@ -129,6 +129,7 @@
   justify-content: space-evenly;
   padding: 5px;
   align-items: center;
+  cursor: pointer;
 }
 .theme_style > span{
     display: flex;

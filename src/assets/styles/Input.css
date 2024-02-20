@@ -3,11 +3,11 @@
     border-radius: 5px;
     margin: 10px 0px;
     width:100%;
-    border:1px solid #a1d1ec;
+    border:1px solid var(--background-color);
     outline: none;
 }
 ::placeholder {
-    color: #a1d1ec;
+    color: var(--background-color);
   }
   .error{
     color:red;

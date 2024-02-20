@@ -9,7 +9,7 @@ import { BiSolidDirectionRight, BiSolidDirectionLeft } from "react-icons/bi";
 const Header = () => {
   const [colorTheme, setColorTheme] = useState(false);
   const [dropDown, setDropDown] = useState(false);
-  const [direction, setDirection] = useState(false);
+  const [directions, setDirections] = useState(false);
   const routeName = useSelector((state) => state.app.app.routeName);
   const theme = useSelector((state) => state.app.app.themes.colorTheme);
   const DirectionTheme = useSelector((state) => state.app.app.direction);
@@ -26,15 +26,15 @@ const Header = () => {
   };
 
   const handleDirection = () => {
-    setDirection(!direction);
+    setDirections(!directions);
     setDropDown(!dropDown);
-    dispatch(setDirectionData(direction));
+    dispatch(setDirectionData(directions));
   };
 
   return (
     <div className="header_container">
-      <div>{routeName}</div>
-      <div className="hear_icon" onClick={handleDropdown}>
+      <div className="head_name">{routeName}</div>
+      <div className="head_icon" onClick={handleDropdown}>
         <FaUserCircle />
       </div>
       {dropDown && (
