@@ -1,10 +1,10 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css'
-import { ProtectedRoute } from './component/layout/ProtectedRouter';
-import Login from './component/pages/login/Login';
-// import Layout from './component/layout/Layout';
-import Dashboard from './component/pages/dashboard/Dashboard';
-import Home from './component/pages/home/home';
+import { ProtectedRoute } from './layout/ProtectedRouter';
+import Dashboard from './pages/dashboard/Dashboard';
+import Home from './pages/home/Home';
+import Login from './pages/login/Login';
+
 
 
 function App() {

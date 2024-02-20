@@ -1,15 +1,14 @@
 import { useState } from "react"
-import Input from "../../common/Input"
-import '../../../assets/styles/Login.css'
-import Button from "../../common/Button";
 import { useFormik } from "formik";
-import { loginSchema } from "../../validation/LoginSchema";
 import { AiOutlineEye } from "react-icons/ai";
 import { RiEyeCloseLine } from "react-icons/ri";
-import { setLogin } from "../../store/Initializer";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
-
+import { loginSchema } from "../../validation/LoginSchema";
+import { setLogin } from "../../store/Initializer";
+import Input from "../../component/common/Input";
+import Button from "../../component/common/Button";
+import "../../assets/styles/Login.css"
 const Login = () => {
     const [loading, setLoading] = useState(false);
     const navigate = useNavigate();
