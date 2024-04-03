@@ -10,9 +10,9 @@ const Layout = () => {
 
   return (
     <div
-      className={`main_layout ${
-        DirectionTheme? "rtl" : "ltr"
-      } ${theme?"dark-theme":"light-theme"}`}
+      className={`main_layout ${DirectionTheme ? "rtl" : "ltr"} ${
+        theme ? "dark-theme" : "light-theme"
+      }`}
     >
       <Sider />
       <div className={`outlet_content  ${!menu ? "expand" : "reduce"}`}>

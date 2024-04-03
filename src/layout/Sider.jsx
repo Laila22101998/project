@@ -24,7 +24,7 @@ const Sider = () => {
   return (
     <div className={`sider_main ${!menu ? "sider_expand" : "sider_reduce"}`}>
       <div className="sider_head">
-        {!menu && <div >Template</div>}
+        {!menu && <div>Template</div>}
         <div>
           {!menu ? (
             <IoMenu onClick={handleExpand} />
@@ -43,9 +43,7 @@ const Sider = () => {
               location.pathname === route.path ? "active-link" : ""
             } 
             ${!menu ? "active-content" : "link_content"} ${
-              DirectionTheme
-                ? "link_name"
-                : "link_div"
+              DirectionTheme ? "link_name" : "link_div"
             }`}
           >
             <span className="link_icon">{route.icon}</span>
