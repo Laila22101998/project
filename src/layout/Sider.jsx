@@ -47,7 +47,7 @@ const Sider = () => {
             }`}
           >
             <span className="link_icon">{route.icon}</span>
-            {!menu && <span className={``}>{route.name}</span>}
+            {!menu && <span>{route.name}</span>}
           </Link>
         </div>
       ))}
