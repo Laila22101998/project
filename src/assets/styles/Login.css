@@ -24,12 +24,12 @@
     width: 70%;
 }
 
-.password1 {
+.password_style {
     position: relative;
     left: 32%;
     bottom: 12%;
 }
-.password2{
+.passwords_style{
     position: relative;
     left: 32%;
     bottom: 8%;

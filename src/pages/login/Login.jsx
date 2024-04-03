@@ -71,14 +71,14 @@ const Login = () => {
           <AiOutlineEye
             onClick={handleShow}
             className={`${
-              errors.password && touched.password ? "password1" : "password2"
+              errors.password && touched.password ? "password_style" : "passwords_style"
             }`}
           />
         ) : (
           <RiEyeCloseLine
             onClick={handleShow}
             className={`${
-              errors.password && touched.password ? "password1" : "password2"
+              errors.password && touched.password ? "password_style" : "passwords_style"
             }`}
           />
         )}
