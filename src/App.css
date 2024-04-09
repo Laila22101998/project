@@ -15,18 +15,23 @@ body {
   /* Add other dark theme variables here */
 
   /* Light theme variables */
-  --light-background-color: #436fcd;
-  --light-primary-color: #0251b3;
-  --light-secondary-color: #0074b7;
-  --light-teritory-color: #163b50;
-  --light-quaternary-color: #d8d7d5;
+  --light-background-color: #1d1e23 ;
+  --light-primary-color:  #0b0c11;
+  --light-secondary-color: 
+   /* #E5D4FF */
+   #8e07d1;
+  --light-teritory-color: #48285b
+   /* #DCBFFF */
+   ;
+  --light-quaternary-color: #8e07d1;
   /* Add other light theme variables here */
 
   /* Default to dark theme */
-  --background-color: var(--dark-background-color);
-  --primary-color: var(--dark-primary-color);
-  --secondary-color: var(--dark-secondary-color);
-  --teritory-color: var(--dark-teritory-color);
+  --background-color: var(--light-background-color);
+  --primary-color: var(--light-primary-color);
+  --secondary-color: var(--light-secondary-color);
+  --teritory-color: var(--light-teritory-color);
+  --quaternary-color: var(--light-quaternary-color);
   /* Add other default variables here */
 }
 

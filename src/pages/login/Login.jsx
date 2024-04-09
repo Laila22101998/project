@@ -37,13 +37,13 @@ const Login = () => {
     if (values) {
       setLoading(false);
       formik.resetForm();
-      console.log(values);
       setTimeout(() => {
         navigate("/");
       }, 1000);
       dispatch(setLogin({ userName: values.userName }));
     }
   };
+
   return (
     <div className="login_section">
       <div className="login_div">
